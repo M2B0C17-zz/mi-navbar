@@ -1,0 +1,55 @@
+body{
+  margin: 0; /* para que nuestro navbar se ajuste al borde del navegador */
+}
+
+ul{
+  list-style: none; /* para sacarle el estilo predefinido con el punto que tienen las listas */
+  margin: 0; /* cero margen */
+  padding: 0; /* relleno : 0 */
+  overflow: hidden; /* overflow = Controla el comportamiento de los contenidos que no caben en su elemento contenedor. Hidden = oculto o ocultar. */
+  background-color: #333; /* color de fondo */
+  font-family: 'Roboto', sans-serif;
+}
+
+ul li{
+  display: inline-block; /* Esta propiedad especifica el tipo de caja de representación que se usará para un elemento. Bloque en linea */
+}
+
+ul li a{
+  display: inline-block;
+  color: white; /* color al texto */
+  text-align: center;
+  padding: 26px;
+  text-decoration: none; /* le quitamos el sibrayado por defecto que tienen los enlaces */
+}
+
+/* Con hover logramos que cuando el cursor pase por el enlace, este cambie de color en su fondo y texto */
+li a:hover, .dropdown:hover, .dropbtn:hover{
+  background-color: #FFE900;
+  color: #333;
+}
+
+.dropdown-content{ /* contiene los estilos del contenedor de los enlaces */
+  display: none; /* Su display es none, para que al principio los enlaces no se vean */
+  position: absolute;
+  background-color: #F9F9F9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5); /* efecto de sombra */
+  z-index: 1;
+}
+
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* colocamos display block para que el contenedor y sus enlaces se visualicen. */
+  text-align: center;
+}
+
+.dropdown-contenta a:hover{
+  background-color: #FFE900;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
